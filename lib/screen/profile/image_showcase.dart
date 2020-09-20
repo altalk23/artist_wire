@@ -13,10 +13,6 @@ class _ImageShowcaseWidgetState extends State<ImageShowcaseWidget> {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 32),
       child: Card(
-        color: Themes.blue.shade800,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
         child: Container(
           height: 184,
           padding: EdgeInsets.only(bottom: 16, left: 16, right: 16, top: 16),
@@ -70,3 +66,81 @@ class _ImageShowcaseWidgetState extends State<ImageShowcaseWidget> {
     );
   }
 }
+/*
+Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          direction: Axis.horizontal,
+          children: <Widget>[
+            Flexible(
+              flex: 1,
+              child: PlaceholderImage(),
+            ),
+            Flexible(
+              flex: 1,
+              child: PlaceholderImage(),
+            ),
+            Flexible(
+              flex: 1,
+              child: PlaceholderImage(),
+            ),
+            Flexible(
+              flex: 1,
+              child: PlaceholderImage(),
+            ),
+            Flexible(
+              flex: 2,
+              child: PlaceholderImage(),
+            ),
+          ],
+        ),
+ */
+
+/*
+child: Container(
+          height: 184,
+          padding: EdgeInsets.only(bottom: 16, left: 16, right: 16, top: 16),
+          child: Row(
+            children: <Widget>[
+              Flexible(
+                flex: 1,
+                child: Column(
+                  children: <Widget>[
+                    Flexible(
+                      flex: 1,
+                      child: PlaceholderImage(),
+                    ),
+                    SizedBox(height: 8),
+                    Flexible(
+                      flex: 1,
+                      child: PlaceholderImage(),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(width: 8),
+              Flexible(
+                flex: 1,
+                child: Column(
+                  children: <Widget>[
+                    Flexible(
+                      flex: 1,
+                      child: PlaceholderImage(),
+                    ),
+                    SizedBox(height: 8),
+                    Flexible(
+                      flex: 1,
+                      child: PlaceholderImage(),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(width: 8),
+              Flexible(
+                flex: 2,
+                child: PlaceholderImage(),
+              ),
+            ],
+          ),
+        ),
+ */

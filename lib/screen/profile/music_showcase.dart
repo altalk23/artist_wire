@@ -13,10 +13,6 @@ class _MusicShowcaseWidgetState extends State<MusicShowcaseWidget> {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 32),
       child: Card(
-        color: Themes.blue.shade800,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
         child: Container(
           padding: EdgeInsets.only(bottom: 32, left: 24, right: 24, top: 8),
           child: Column(

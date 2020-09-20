@@ -56,5 +56,12 @@ class Themes {
         fontStyle: FontStyle.italic,
       ),
     ),
+    cardTheme: CardTheme(
+      color: Themes.blue.shade800,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      shadowColor: Colors.black26,
+    ),
   );
 }
