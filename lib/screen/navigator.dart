@@ -1,3 +1,4 @@
+import 'package:artist_project/screen/discover/discover.dart';
 import 'package:artist_project/screen/profile/profile.dart';
 
 import 'package:flutter/material.dart';

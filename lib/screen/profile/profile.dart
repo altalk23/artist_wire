@@ -1,4 +1,5 @@
 import 'package:artist_project/screen/profile/details.dart';
+import 'package:artist_project/screen/profile/music_showcase.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Themes.blue.shade900,
-      child: Column(
+      child: ListView(
         children: <Widget>[
-          SizedBox(height: 84),
+          SizedBox(height: 64),
           DetailsWidget(),
+          SizedBox(height: 32),
+          MusicShowcaseWidget(),
+
         ],
       ),
     );
