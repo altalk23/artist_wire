@@ -1,3 +1,4 @@
+import 'package:artist_project/screen/placeholder_image.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -32,27 +33,7 @@ class _MusicShowcaseWidgetState extends State<MusicShowcaseWidget> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    height: 104,
-                    width: 104,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                      image: DecorationImage(
-                        fit: BoxFit.fitHeight,
-                        alignment: FractionalOffset.center,
-                        image: NetworkImage(
-                          "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-                        ),
-                      ),
-                    ),
-                  ),
+                  PlaceholderImage(width:104, height:104),
                   SizedBox(width: 16),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

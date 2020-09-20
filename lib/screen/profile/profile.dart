@@ -1,4 +1,5 @@
 import 'package:artist_project/screen/profile/details.dart';
+import 'package:artist_project/screen/profile/image_showcase.dart';
 import 'package:artist_project/screen/profile/music_showcase.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           DetailsWidget(),
           SizedBox(height: 32),
           MusicShowcaseWidget(),
-
+          SizedBox(height: 32),
+          ImageShowcaseWidget(),
         ],
       ),
     );
