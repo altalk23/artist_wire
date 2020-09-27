@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class PlaceholderImage extends StatelessWidget {
   final double width;
   final double height;
+  final double radius;
 
-  const PlaceholderImage({Key key, this.width, this.height}) : super(key: key);
+  const PlaceholderImage({Key key, this.width, this.height, this.radius = 8,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +20,7 @@ class PlaceholderImage extends StatelessWidget {
             blurRadius: 4,
           ),
         ],
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(radius),
         image: DecorationImage(
           fit: BoxFit.fitHeight,
           alignment: FractionalOffset.center,

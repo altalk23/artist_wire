@@ -12,7 +12,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16),
       color: Themes.blue.shade900,
-      child: Column(
+      child: ListView(
         children: <Widget>[
           SizedBox(height: 64),
           Container(
@@ -100,6 +100,40 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
               ],
             ),
           ),
+          SizedBox(height: 40),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Themes.blue.shade800,
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+            ),
+            child: Column(
+              children: <Widget>[
+                Text(
+                  "Önerilenler",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w200,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    SuggestedPeopleWidget(name: "İsmail Özcan",),
+                    SuggestedPeopleWidget(name: "Aykut Şimşek",),
+                    SuggestedPeopleWidget(name: "Abdullah Özdemir",),
+                    SuggestedPeopleWidget(name: "Mehmet Kaplan",),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 32),
         ],
       ),
     );
@@ -107,7 +141,8 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
 }
 
 class FilterSelector extends StatefulWidget {
-  FilterSelector({Key key, this.title, this.options, this.add}): super(key: key);
+  FilterSelector({Key key, this.title, this.options, this.add})
+      : super(key: key);
   final String title;
   final List<String> options;
   final bool add;
@@ -175,24 +210,78 @@ class _FilterSelectorState extends State<FilterSelector> {
                 ),
                 alignment: Alignment.center,
               ),
-              widget.add ? Container(
-                child: FlatButton(
-                  child: Icon(
-                    Icons.add,
-                    size: 16,
-                    color: Themes.blue.shade50,
-                  ),
-                ),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Themes.blue.shade50,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                alignment: Alignment.center,
-              ) : Container(),
+              widget.add
+                  ? Container(
+                      child: FlatButton(
+                        child: Icon(
+                          Icons.add,
+                          size: 16,
+                          color: Themes.blue.shade50,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Themes.blue.shade50,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      alignment: Alignment.center,
+                    )
+                  : Container(),
             ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class SuggestedPeopleWidget extends StatelessWidget {
+  final String name;
+
+  const SuggestedPeopleWidget({Key key, this.name}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Container(
+          height: 64,
+          width: 64,
+          decoration: BoxDecoration(
+            color: Themes.blue.shade400,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 4,
+                blurRadius: 4,
+              ),
+            ],
+            border: Border.all(
+              color: Themes.blue.shade100,
+              width: 1,
+            ),
+            image: DecorationImage(
+              fit: BoxFit.fitHeight,
+              alignment: FractionalOffset.center,
+              image: NetworkImage(
+                "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+              ),
+            ),
+            borderRadius: BorderRadius.all(
+              Radius.circular(32),
+            ),
+          ),
+        ),
+        SizedBox(height: 4),
+        Text(
+          name,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 10,
+            fontWeight: FontWeight.w100,
+            fontStyle: FontStyle.italic,
           ),
         ),
       ],
