@@ -2,6 +2,7 @@ import 'package:artist_project/screen/profile/details.dart';
 import 'package:artist_project/screen/profile/image_showcase.dart';
 import 'package:artist_project/screen/profile/music_showcase.dart';
 import 'package:artist_project/screen/profile/people_showcase.dart';
+import 'package:artist_project/screen/profile/post_showcase.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ImageShowcaseWidget(),
           SizedBox(height: 32),
           PeopleShowcaseWidget(),
+          SizedBox(height: 32),
+          PostShowcaseWidget(),
         ],
       ),
     );

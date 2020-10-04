@@ -63,5 +63,6 @@ class Themes {
       ),
       shadowColor: Colors.black26,
     ),
+    hintColor: Themes.blueGrey.shade600,
   );
 }
