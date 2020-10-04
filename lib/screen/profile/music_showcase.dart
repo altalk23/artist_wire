@@ -11,7 +11,7 @@ class _MusicShowcaseWidgetState extends State<MusicShowcaseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 32),
+      margin: EdgeInsets.symmetric(horizontal: 16),
       child: Card(
         child: Container(
           padding: EdgeInsets.only(bottom: 32, left: 24, right: 24, top: 8),

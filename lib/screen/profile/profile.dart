@@ -28,6 +28,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
           PeopleShowcaseWidget(),
           SizedBox(height: 32),
           PostShowcaseWidget(),
+          SizedBox(height: 32),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            height: 184,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Themes.blue.shade200,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            alignment: Alignment.center,
+            child: FlatButton(
+              child: Icon(
+                Icons.add,
+                size: 56,
+                color: Themes.blue.shade200,
+              ),
+            ),
+          ),
+          SizedBox(height: 32),
         ],
       ),
     );

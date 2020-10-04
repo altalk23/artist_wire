@@ -11,7 +11,7 @@ class _PeopleShowcaseWidgetState extends State<PeopleShowcaseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 32),
+      margin: EdgeInsets.symmetric(horizontal: 16),
       child: Card(
         child: Container(
           padding: EdgeInsets.only(bottom: 8, left: 8, right: 8, top: 8),

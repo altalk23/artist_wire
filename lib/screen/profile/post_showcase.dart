@@ -10,7 +10,7 @@ class _PostShowcaseWidgetState extends State<PostShowcaseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 32),
+      margin: EdgeInsets.symmetric(horizontal: 16),
       child: Card(
         child: Container(
           padding: EdgeInsets.all(8),
