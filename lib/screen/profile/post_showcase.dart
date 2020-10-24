@@ -1,4 +1,4 @@
-import 'package:artist_project/screen/placeholder_image.dart';
+import 'package:artist_project/screen/placeholder/image.dart';
 import 'package:flutter/material.dart';
 
 class PostShowcaseWidget extends StatefulWidget {

@@ -95,9 +95,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                         image: DecorationImage(
                           fit: BoxFit.fitHeight,
                           alignment: FractionalOffset.center,
-                          image: NetworkImage(
-                            "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-                          ),
+                          image: AssetImage("assets/placeholder.png"),
                         ),
                         borderRadius: BorderRadius.all(
                           Radius.circular(48),

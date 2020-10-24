@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class PlaceholderImage extends StatelessWidget {
@@ -25,9 +24,7 @@ class PlaceholderImage extends StatelessWidget {
         image: DecorationImage(
           fit: fit,
           alignment: FractionalOffset.center,
-          image: NetworkImage(
-            "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-          ),
+          image: AssetImage("assets/placeholder.png")
         ),
       ),
     );
