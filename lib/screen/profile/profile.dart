@@ -18,7 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       color: Themes.blue.shade900,
       child: ListView(
         children: <Widget>[
-          SizedBox(height: 64),
+          SizedBox(height: 32),
           DetailsWidget(),
           SizedBox(height: 32),
           MusicShowcaseWidget(),

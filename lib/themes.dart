@@ -37,7 +37,7 @@ class Themes {
     primarySwatch: blue,
     accentColor: blueGrey.shade600,
     textTheme: TextTheme(
-      headline4: TextStyle(
+      headline3: TextStyle(
         color: Colors.white,
         fontSize: 35,
         fontWeight: FontWeight.w900,
@@ -46,12 +46,24 @@ class Themes {
       headline6: TextStyle(
         color: Colors.white,
         fontSize: 20,
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w300,
         fontStyle: FontStyle.italic,
       ),
       caption: TextStyle(
         color: Colors.white,
         fontSize: 12,
+        fontWeight: FontWeight.w100,
+        fontStyle: FontStyle.italic,
+      ),
+      button: TextStyle(
+        color: blue.shade50,
+        fontSize: 10,
+        fontWeight: FontWeight.w400,
+        fontStyle: FontStyle.italic,
+      ),
+      subtitle1: TextStyle(
+        color: Colors.white,
+        fontSize: 9,
         fontWeight: FontWeight.w100,
         fontStyle: FontStyle.italic,
       ),

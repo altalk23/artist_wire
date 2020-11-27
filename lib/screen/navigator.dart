@@ -40,7 +40,7 @@ class _MainNavigatorState extends State<MainNavigator> {
           canvasColor: Color(0xFF191919),
         ),
         child: BottomNavigationBar(
-          selectedItemColor: Themes.blue.shade300,
+          selectedItemColor: Themes.blue.shade400,
           unselectedItemColor: Themes.blueGrey.shade400,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
