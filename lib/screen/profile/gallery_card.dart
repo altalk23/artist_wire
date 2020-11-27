@@ -1,11 +1,12 @@
 import 'package:artist_project/screen/placeholder/image.dart';
+import 'package:artist_project/screen/widgets.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
 class GalleryCard extends StatefulWidget {
-  final String username;
+  final dynamic data;
 
-  const GalleryCard({Key key, this.username}) : super(key: key);
+  const GalleryCard({Key key, this.data}) : super(key: key);
 
   @override
   _GalleryCardState createState() => _GalleryCardState();
@@ -21,42 +22,42 @@ class _GalleryCardState extends State<GalleryCard> {
         child: Row(
           children: <Widget>[
             Flexible(
-              flex: 1,
-              child: Column(
-                children: <Widget>[
-                  Flexible(
-                    flex: 1,
-                    child: PlaceholderImage(),
-                  ),
-                  SizedBox(height: 8),
-                  Flexible(
-                    flex: 1,
-                    child: PlaceholderImage(),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(width: 8),
-            Flexible(
-              flex: 1,
-              child: Column(
-                children: <Widget>[
-                  Flexible(
-                    flex: 1,
-                    child: PlaceholderImage(),
-                  ),
-                  SizedBox(height: 8),
-                  Flexible(
-                    flex: 1,
-                    child: PlaceholderImage(),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(width: 8),
-            Flexible(
               flex: 2,
-              child: PlaceholderImage(),
+              child: ContainerImage(path: widget.data["images"][0]),
+            ),
+            SizedBox(width: 8),
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: ContainerImage(path: widget.data["images"][1]),
+                  ),
+                  SizedBox(height: 8),
+                  Flexible(
+                    flex: 1,
+                    child: ContainerImage(path: widget.data["images"][2]),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(width: 8),
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: ContainerImage(path: widget.data["images"][3]),
+                  ),
+                  SizedBox(height: 8),
+                  Flexible(
+                    flex: 1,
+                    child: ContainerImage(path: widget.data["images"][4]),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

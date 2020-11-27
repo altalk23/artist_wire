@@ -1,11 +1,12 @@
+import 'package:artist_project/inherited_username.dart';
 import 'package:artist_project/screen/placeholder/image.dart';
+import 'package:artist_project/screen/widgets.dart';
 import 'package:flutter/material.dart';
 
 class MusicCard extends StatefulWidget {
-  final String username;
   final dynamic data;
 
-  const MusicCard({Key key, this.username, this.data}) : super(key: key);
+  const MusicCard({Key key, this.data}) : super(key: key);
 
   @override
   _MusicCardState createState() => _MusicCardState();
@@ -31,7 +32,7 @@ class _MusicCardState extends State<MusicCard> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                PlaceholderImage(width: 104, height: 104),
+                ContainerImage(width: 104, height: 104, path: widget.data["image"]),
                 SizedBox(width: 16),
                 Expanded(
                   child: Column(

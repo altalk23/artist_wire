@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class DetailsWidget extends StatefulWidget {
   final String username;
-  DetailsWidget({key, this.username}) : super(key: key);
+  final dynamic data;
+  DetailsWidget({key, this.username, this.data}) : super(key: key);
 
   @override
   _DetailsWidgetState createState() => _DetailsWidgetState();

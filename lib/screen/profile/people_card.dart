@@ -1,11 +1,12 @@
+import 'package:artist_project/dummydata.dart';
 import 'package:artist_project/screen/placeholder/image.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
 class PeopleCard extends StatefulWidget {
-  final String username;
+  final dynamic data;
 
-  const PeopleCard({Key key, this.username}) : super(key: key);
+  const PeopleCard({Key key, this.data}) : super(key: key);
 
   @override
   _PeopleCardState createState() => _PeopleCardState();
@@ -20,9 +21,9 @@ class _PeopleCardState extends State<PeopleCard> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SinglePeopleShowcaseWidget(),
-            SinglePeopleShowcaseWidget(),
-            SinglePeopleShowcaseWidget(),
+            SinglePeopleShowcaseWidget(username: widget.data[0]),
+            SinglePeopleShowcaseWidget(username: widget.data[1]),
+            SinglePeopleShowcaseWidget(username: widget.data[2]),
           ],
         ),
       ),
@@ -31,6 +32,10 @@ class _PeopleCardState extends State<PeopleCard> {
 }
 
 class SinglePeopleShowcaseWidget extends StatelessWidget {
+  final String username;
+
+  const SinglePeopleShowcaseWidget({Key key, this.username}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +51,7 @@ class SinglePeopleShowcaseWidget extends StatelessWidget {
             PlaceholderImage(width: 90, height: 105),
             SizedBox(height: 4,),
             Text(
-              "GGGGGGGG",
+              cloudData[username]["profile"]["details"]["name"],
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
@@ -55,7 +60,7 @@ class SinglePeopleShowcaseWidget extends StatelessWidget {
               ),
             ),
             Text(
-              "3456 Fans",
+              cloudData[username]["profile"]["details"]["followerCount"] + " Followers",
               style: TextStyle(
                 color: Colors.white60,
                 fontSize: 10,

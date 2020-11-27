@@ -49,22 +49,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/placeholder.png
-  - assets/profile_image/username0.png
-  - assets/profile_image/username1.png
-  - assets/profile_image/username2.png
-  - assets/profile_image/username3.png
-  - assets/profile_image/username4.png
-  - assets/profile_image/username5.png
-  - assets/profile_image/username6.png
-  - assets/profile_image/username7.png
-  - assets/profile_image/username8.png
-  - assets/profile_image/username9.png
-  - assets/profile_image/username10.png
-  - assets/profile_image/username11.png
-  - assets/profile_image/username12.png
-  - assets/profile_image/username13.png
-  - assets/profile_image/username14.png
-  - assets/profile_image/username15.png
+  - assets/profile_image/
+  - assets/placeholder/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

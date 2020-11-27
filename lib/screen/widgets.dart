@@ -5,7 +5,8 @@ class TitleWidget extends StatelessWidget {
   final String title;
   final String username;
 
-  const TitleWidget({Key key, @required this.title, @required this.username}) : super(key: key);
+  const TitleWidget({Key key, @required this.title, @required this.username})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,10 @@ class ProfileImageWidget extends StatelessWidget {
   final String username;
   final double size;
 
-  const ProfileImageWidget({Key key, @required this.username, @required this.size}) : super(key: key);
+  const ProfileImageWidget(
+      {Key key, @required this.username, @required this.size})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,13 +50,12 @@ class ProfileImageWidget extends StatelessWidget {
         ],
         image: profileImage(username),
         borderRadius: BorderRadius.all(
-          Radius.circular(size/2),
+          Radius.circular(size / 2),
         ),
       ),
     );
   }
 }
-
 
 DecorationImage profileImage(String username) {
   return DecorationImage(
@@ -77,6 +80,46 @@ class CardContainer extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
       child: child,
+    );
+  }
+}
+
+class ContainerImage extends StatelessWidget {
+  final double width;
+  final double height;
+  final double radius;
+  final BoxFit fit;
+  final String path;
+
+  const ContainerImage({
+    Key key,
+    this.width,
+    this.height,
+    this.radius = 8,
+    this.fit = BoxFit.fitHeight,
+    this.path = "assets/placeholder.png",
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            spreadRadius: 4,
+            blurRadius: 4,
+          ),
+        ],
+        borderRadius: BorderRadius.circular(radius),
+        image: DecorationImage(
+          fit: fit,
+          alignment: FractionalOffset.center,
+          image: AssetImage(this.path),
+        ),
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:artist_project/inherited_username.dart';
 import 'package:artist_project/screen/discover/discover.dart';
 import 'package:artist_project/screen/match/match.dart';
 import 'package:artist_project/screen/match/match_details.dart';
@@ -34,7 +35,10 @@ class _MainNavigatorState extends State<MainNavigator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _widgetOptions[_selectedIndex],
+      body: InheritedUsername(
+        username: "username0",
+        child: _widgetOptions[_selectedIndex],
+      ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Color(0xFF191919),

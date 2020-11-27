@@ -167,7 +167,7 @@ class SuggestedPeopleWidget extends StatelessWidget {
       children: <Widget>[
         ProfileImageWidget(username: username, size: 60),
         SizedBox(height: 4),
-        Text(cloudData[username]["name"],
+        Text(cloudData[username]["profile"]["details"]["name"],
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.subtitle1),
       ],

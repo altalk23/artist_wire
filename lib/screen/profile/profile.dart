@@ -1,4 +1,5 @@
 import 'package:artist_project/dummydata.dart';
+import 'package:artist_project/inherited_username.dart';
 import 'package:artist_project/screen/profile/details.dart';
 import 'package:artist_project/screen/profile/gallery_card.dart';
 import 'package:artist_project/screen/profile/music_card.dart';
@@ -15,16 +16,17 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    String username = InheritedUsername.of(context).username;
     return Container(
       color: Themes.blue.shade900,
       child: ListView(
         children: <Widget>[
           SizedBox(height: 32),
-          DetailsWidget(username: "username0"),
-          MusicCard(username: "username0", data: cloudData["username0"]["profile"]["music"]),
-          GalleryCard(username: "username0", data: cloudData["username0"]["profile"]["gallery"]),
-          PeopleCard(username: "username0"),
-          PostCard(username: "username0"),
+          DetailsWidget(data: cloudData[username]["profile"]["details"]),
+          MusicCard(data: cloudData[username]["profile"]["music"]),
+          GalleryCard(data: cloudData[username]["profile"]["gallery"]),
+          PeopleCard(data: cloudData[username]["profile"]["people"]),
+          PostCard(data: cloudData[username]["profile"]["post"]),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 16),
             height: 184,

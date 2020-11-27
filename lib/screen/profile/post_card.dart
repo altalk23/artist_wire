@@ -2,9 +2,9 @@ import 'package:artist_project/screen/placeholder/image.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatefulWidget {
-  final String username;
+  final dynamic data;
 
-  const PostCard({Key key, this.username}) : super(key: key);
+  const PostCard({Key key, this.data}) : super(key: key);
 
   @override
   _PostCardState createState() => _PostCardState();
