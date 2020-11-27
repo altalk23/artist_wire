@@ -2,7 +2,8 @@ import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
 class DetailsWidget extends StatefulWidget {
-  DetailsWidget({key}) : super(key: key);
+  final String username;
+  DetailsWidget({key, this.username}) : super(key: key);
 
   @override
   _DetailsWidgetState createState() => _DetailsWidgetState();

@@ -37,15 +37,21 @@ class Themes {
     primarySwatch: blue,
     accentColor: blueGrey.shade600,
     textTheme: TextTheme(
-      headline3: TextStyle(
+      headline2: TextStyle(
         color: Colors.white,
         fontSize: 35,
         fontWeight: FontWeight.w900,
         fontStyle: FontStyle.italic,
       ),
-      headline6: TextStyle(
+      headline4: TextStyle(
         color: Colors.white,
         fontSize: 20,
+        fontWeight: FontWeight.w300,
+        fontStyle: FontStyle.italic,
+      ),
+      headline6: TextStyle(
+        color: Colors.white,
+        fontSize: 14,
         fontWeight: FontWeight.w300,
         fontStyle: FontStyle.italic,
       ),
@@ -73,6 +79,7 @@ class Themes {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
       ),
+      margin: EdgeInsets.all(16),
       shadowColor: Colors.black26,
     ),
     hintColor: Themes.blueGrey.shade600,

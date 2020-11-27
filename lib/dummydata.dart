@@ -1,17 +1,41 @@
 dynamic cloudData = {
   "username0": {
     "name": "Ad Soyad0",
-    "friends": [
-      "username1",
+    "followers": [
       "username2",
       "username5",
+      "username8",
+      "username13",
     ],
     "links": [
       "username1",
       "username3",
       "username4",
-      "username8",
     ],
+    "profile": {
+      "order": ["details", "music", "image", "people", "post"],
+      "details": {
+        "name": "Ad Soyad0",
+        "description":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "genres": "Rock, Alternative Rock",
+        "followerCount": 4,
+        "linkCount": 3,
+        "locationTop": "İstanbul",
+        "locationBottom": "Beşiktaş",
+      },
+      "music": {
+        "artist": "Ad Soyad0",
+        "song": "Alkım korkuyor",
+        "date": "34 Aralık",
+        "year": "2020",
+      },
+      "gallery": {
+        "images": [
+
+        ],
+      }
+    },
   },
   "username1": {
     "name": "Ad Soyad1",

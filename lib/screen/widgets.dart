@@ -16,7 +16,7 @@ class TitleWidget extends StatelessWidget {
         children: <Widget>[
           Text(
             title,
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.headline2,
           ),
           ProfileImageWidget(username: username, size: 84)
         ],

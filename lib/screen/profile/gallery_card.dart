@@ -2,66 +2,64 @@ import 'package:artist_project/screen/placeholder/image.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
-class ImageShowcaseWidget extends StatefulWidget {
+class GalleryCard extends StatefulWidget {
+  final String username;
+
+  const GalleryCard({Key key, this.username}) : super(key: key);
+
   @override
-  _ImageShowcaseWidgetState createState() => _ImageShowcaseWidgetState();
+  _GalleryCardState createState() => _GalleryCardState();
 }
 
-class _ImageShowcaseWidgetState extends State<ImageShowcaseWidget> {
+class _GalleryCardState extends State<GalleryCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16),
-      child: Card(
-        child: Container(
-          height: 184,
-          padding: EdgeInsets.only(bottom: 16, left: 16, right: 16, top: 16),
-          child: Row(
-            children: <Widget>[
-              Flexible(
-                flex: 1,
-                child: Column(
-                  children: <Widget>[
-                    Flexible(
-                      flex: 1,
-                      child: PlaceholderImage(),
-                    ),
-                    SizedBox(height: 8),
-                    Flexible(
-                      flex: 1,
-                      child: PlaceholderImage(),
-                    ),
-                  ],
-                ),
+    return Card(
+      child: Container(
+        height: 184,
+        padding: EdgeInsets.all(8),
+        child: Row(
+          children: <Widget>[
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: PlaceholderImage(),
+                  ),
+                  SizedBox(height: 8),
+                  Flexible(
+                    flex: 1,
+                    child: PlaceholderImage(),
+                  ),
+                ],
               ),
-              SizedBox(width: 8),
-              Flexible(
-                flex: 1,
-                child: Column(
-                  children: <Widget>[
-                    Flexible(
-                      flex: 1,
-                      child: PlaceholderImage(),
-                    ),
-                    SizedBox(height: 8),
-                    Flexible(
-                      flex: 1,
-                      child: PlaceholderImage(),
-                    ),
-                  ],
-                ),
+            ),
+            SizedBox(width: 8),
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: PlaceholderImage(),
+                  ),
+                  SizedBox(height: 8),
+                  Flexible(
+                    flex: 1,
+                    child: PlaceholderImage(),
+                  ),
+                ],
               ),
-              SizedBox(width: 8),
-              Flexible(
-                flex: 2,
-                child: PlaceholderImage(),
-              ),
-            ],
-          ),
+            ),
+            SizedBox(width: 8),
+            Flexible(
+              flex: 2,
+              child: PlaceholderImage(),
+            ),
+          ],
         ),
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
       ),
     );
   }

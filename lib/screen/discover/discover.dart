@@ -32,6 +32,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                     title: "Neye ihtiyacın var?",
                     options: musicianFilter,
                   ),
+                  SizedBox(height: 16),
                   FilterSelector(
                     title: "Hangi müzik türü?",
                     options: genreFilter,
@@ -47,7 +48,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 Text(
                   "Önerilenler",
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headline4,
                 ),
                 SizedBox(height: 8),
                 Row(
@@ -134,7 +135,7 @@ class _FilterSelectorState extends State<FilterSelector> {
         Text(
           widget.title,
           textAlign: TextAlign.start,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headline4,
         ),
         SizedBox(height: 8),
         SizedBox(

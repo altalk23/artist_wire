@@ -2,27 +2,28 @@ import 'package:artist_project/screen/placeholder/image.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
-class PeopleShowcaseWidget extends StatefulWidget {
+class PeopleCard extends StatefulWidget {
+  final String username;
+
+  const PeopleCard({Key key, this.username}) : super(key: key);
+
   @override
-  _PeopleShowcaseWidgetState createState() => _PeopleShowcaseWidgetState();
+  _PeopleCardState createState() => _PeopleCardState();
 }
 
-class _PeopleShowcaseWidgetState extends State<PeopleShowcaseWidget> {
+class _PeopleCardState extends State<PeopleCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16),
-      child: Card(
-        child: Container(
-          padding: EdgeInsets.only(bottom: 8, left: 8, right: 8, top: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              SinglePeopleShowcaseWidget(),
-              SinglePeopleShowcaseWidget(),
-              SinglePeopleShowcaseWidget(),
-            ],
-          ),
+    return Card(
+      child: Container(
+        padding: EdgeInsets.all(8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SinglePeopleShowcaseWidget(),
+            SinglePeopleShowcaseWidget(),
+            SinglePeopleShowcaseWidget(),
+          ],
         ),
       ),
     );
