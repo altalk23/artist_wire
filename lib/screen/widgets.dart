@@ -123,3 +123,17 @@ class ContainerImage extends StatelessWidget {
     );
   }
 }
+
+class BackgroundContainer extends StatelessWidget {
+  final Widget child;
+
+  const BackgroundContainer({Key key, this.child}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: child,
+      color: Themes.blue.shade900,
+    );
+  }
+}
