@@ -1,10 +1,11 @@
+import 'package:artist_project/screen/widgets.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
 class DetailsWidget extends StatefulWidget {
-  final String username;
   final dynamic data;
-  DetailsWidget({key, this.username, this.data}) : super(key: key);
+
+  DetailsWidget({key, this.data}) : super(key: key);
 
   @override
   _DetailsWidgetState createState() => _DetailsWidgetState();
@@ -48,62 +49,34 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "Mehmet Karahan",
+                            widget.data["name"],
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w200,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            style: Theme.of(context).textTheme.headline5,
                           ),
                           SizedBox(height: 6),
                           Text(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            widget.data["description"],
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w100,
-                            ),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           SizedBox(height: 6),
                           Text(
-                            "Rock, Alternative Rock",
+                            widget.data["genres"],
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                .copyWith(color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     SizedBox(width: 4),
-                    Container(
-                      height: 96,
-                      width: 96,
-                      decoration: BoxDecoration(
-                        color: Themes.blue.shade400,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            spreadRadius: 4,
-                            blurRadius: 4,
-                          ),
-                        ],
-                        image: DecorationImage(
-                          fit: BoxFit.fitHeight,
-                          alignment: FractionalOffset.center,
-                          image: AssetImage("assets/placeholder.png"),
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(48),
-                        ),
-                      ),
-                    ),
+                    ContainerImage(
+                        width: 96,
+                        height: 96,
+                        radius: 48,
+                        path: widget.data["image"]),
                     SizedBox(width: 12),
                   ],
                 ),
@@ -121,21 +94,14 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                         children: <Widget>[
                           Text(
                             "Followers",
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
-                            "340",
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            widget.data["followerCount"].toString(),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                .copyWith(fontSize: 18),
                           ),
                         ],
                       ),
@@ -143,21 +109,14 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                         children: <Widget>[
                           Text(
                             "Connections",
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
-                            "120",
-                            style: TextStyle(
-                              color: Colors.white60,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            widget.data["linkCount"].toString(),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                .copyWith(fontSize: 18),
                           ),
                         ],
                       ),
@@ -170,27 +129,20 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                       Icon(
                         Icons.location_on,
                         color: Colors.white,
-                        size: 26,
+                        size: 28,
                       ),
                       Column(
                         children: <Widget>[
                           Text(
-                            "İstanbul",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            widget.data["locationTop"],
+                            style: Theme.of(context).textTheme.subtitle1,
                           ),
                           Text(
-                            "Beşiktaş",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w100,
-                              fontStyle: FontStyle.italic,
-                            ),
+                            widget.data["locationBottom"],
+                            style: Theme.of(context)
+                                .textTheme
+                                .subtitle1
+                                .copyWith(fontSize: 11),
                           ),
                         ],
                       ),

@@ -14,6 +14,7 @@ dynamic cloudData = {
     "profile": {
       "order": ["details", "music", "image", "people", "post"],
       "details": {
+        "image": "assets/profile_image/username0.png",
         "name": "Ad Soyad0",
         "followerCount": 4,
         "linkCount": 3,
@@ -32,11 +33,11 @@ dynamic cloudData = {
       },
       "gallery": {
         "images": [
-          "assets/placeholder/placeholder4.png",
-          "assets/placeholder/placeholder1.png",
-          "assets/placeholder/placeholder9.png",
+          "assets/profile_image/username0.png",
+          "assets/placeholder/placeholder5.png",
           "assets/placeholder/placeholder16.png",
-          "assets/placeholder/placeholder12.png",
+          "assets/placeholder/placeholder31.png",
+          "assets/placeholder/placeholder23.png",
         ],
         "_comment": "i want to cry help me please i'm feeling so pressured",
       },
@@ -45,11 +46,15 @@ dynamic cloudData = {
         "username7",
         "username15",
       ],
+      "post": {
+        "image": "assets/placeholder/placeholder20.png",
+      }
     },
   },
   "username1": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username1.png",
         "name": "Ad Soyad1",
         "followerCount": 2,
       },
@@ -58,6 +63,7 @@ dynamic cloudData = {
   "username2": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username2.png",
         "name": "Ad Soyad2",
         "followerCount": 7,
       },
@@ -66,6 +72,7 @@ dynamic cloudData = {
   "username3": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username3.png",
         "name": "Ad Soyad3",
         "followerCount": 4,
       },
@@ -74,6 +81,7 @@ dynamic cloudData = {
   "username4": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username4.png",
         "name": "Ad Soyad4",
         "followerCount": 9,
       },
@@ -82,6 +90,7 @@ dynamic cloudData = {
   "username5": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username5.png",
         "name": "Ad Soyad5",
         "followerCount": 0,
       },
@@ -90,6 +99,7 @@ dynamic cloudData = {
   "username6": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username6.png",
         "name": "Ad Soyad6",
         "followerCount": 1,
       },
@@ -98,6 +108,7 @@ dynamic cloudData = {
   "username7": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username7.png",
         "name": "Ad Soyad7",
         "followerCount": 4,
       },
@@ -106,6 +117,7 @@ dynamic cloudData = {
   "username8": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username8.png",
         "name": "Ad Soyad8",
         "followerCount": 10,
       },
@@ -114,6 +126,7 @@ dynamic cloudData = {
   "username9": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username9.png",
         "name": "Ad Soyad9",
         "followerCount": 5,
       },
@@ -122,6 +135,7 @@ dynamic cloudData = {
   "username10": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username10.png",
         "name": "Ad Soyad10",
         "followerCount": 8,
       },
@@ -130,6 +144,7 @@ dynamic cloudData = {
   "username11": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username11.png",
         "name": "Ad Soyad11",
         "followerCount": 1,
       },
@@ -138,6 +153,7 @@ dynamic cloudData = {
   "username12": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username12.png",
         "name": "Ad Soyad12",
         "followerCount": 3,
       },
@@ -146,6 +162,7 @@ dynamic cloudData = {
   "username13": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username13.png",
         "name": "Ad Soyad13",
         "followerCount": 0,
         "_comment": "haha ben",
@@ -155,6 +172,7 @@ dynamic cloudData = {
   "username14": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username14.png",
         "name": "Ad Soyad14",
         "followerCount": 2,
       },
@@ -163,6 +181,7 @@ dynamic cloudData = {
   "username15": {
     "profile": {
       "details": {
+        "image": "assets/profile_image/username15.png",
         "name": "Ad Soyad15",
         "followerCount": 3,
       },

@@ -1,4 +1,5 @@
 import 'package:artist_project/screen/placeholder/image.dart';
+import 'package:artist_project/screen/widgets.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatefulWidget {
@@ -20,13 +21,14 @@ class _PostCardState extends State<PostCard> {
           children: <Widget>[
             Text(
               "Gönderilerin",
-              style: TextStyle(
-                color: Colors.white60,
-                fontSize: 14,
-                fontWeight: FontWeight.w100,
-              ),
+              style: Theme.of(context).textTheme.headline6,
             ),
-            PlaceholderImage(height: 136, fit: BoxFit.fitWidth,),
+            SizedBox(height: 8),
+            ContainerImage(
+              height: 136,
+              fit: BoxFit.fitWidth,
+              path: widget.data["image"],
+            ),
           ],
         ),
       ),

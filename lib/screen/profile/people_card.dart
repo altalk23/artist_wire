@@ -1,5 +1,6 @@
 import 'package:artist_project/dummydata.dart';
 import 'package:artist_project/screen/placeholder/image.dart';
+import 'package:artist_project/screen/widgets.dart';
 import 'package:artist_project/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -42,33 +43,23 @@ class SinglePeopleShowcaseWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Themes.blueGrey.shade700,
-        border: Border.all(color: Themes.blue.shade50)
+        // border: Border.all(color: Themes.blue.shade50)
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Column(
           children: <Widget>[
-            PlaceholderImage(width: 90, height: 105),
+            ContainerImage(width: 90, height: 105, path: cloudData[username]["profile"]["details"]["image"]),
             SizedBox(height: 4,),
             Text(
               cloudData[username]["profile"]["details"]["name"],
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontWeight: FontWeight.w200,
-                fontStyle: FontStyle.italic,
-              ),
+              style: Theme.of(context).textTheme.subtitle1,
             ),
             Text(
-              cloudData[username]["profile"]["details"]["followerCount"] + " Followers",
-              style: TextStyle(
-                color: Colors.white60,
-                fontSize: 10,
-                fontWeight: FontWeight.w100,
-                fontStyle: FontStyle.italic,
-              ),
+              cloudData[username]["profile"]["details"]["followerCount"].toString() + " Followers",
+              style: Theme.of(context).textTheme.subtitle2,
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 4),
           ],
         ),
       ),

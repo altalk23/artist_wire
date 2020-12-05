@@ -49,6 +49,12 @@ class Themes {
         fontWeight: FontWeight.w300,
         fontStyle: FontStyle.italic,
       ),
+      headline5: TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w100,
+        fontStyle: FontStyle.italic,
+      ),
       headline6: TextStyle(
         color: Colors.white,
         fontSize: 14,
@@ -69,7 +75,19 @@ class Themes {
       ),
       subtitle1: TextStyle(
         color: Colors.white,
+        fontSize: 13,
+        fontWeight: FontWeight.w100,
+        fontStyle: FontStyle.italic,
+      ),
+      subtitle2: TextStyle(
+        color: Colors.white54,
         fontSize: 9,
+        fontWeight: FontWeight.w100,
+        fontStyle: FontStyle.italic,
+      ),
+      bodyText2: TextStyle(
+        color: Colors.white54,
+        fontSize: 10,
         fontWeight: FontWeight.w100,
         fontStyle: FontStyle.italic,
       ),

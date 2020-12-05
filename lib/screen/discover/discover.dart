@@ -169,7 +169,7 @@ class SuggestedPeopleWidget extends StatelessWidget {
         SizedBox(height: 4),
         Text(cloudData[username]["profile"]["details"]["name"],
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.subtitle1),
+            style: Theme.of(context).textTheme.subtitle2),
       ],
     );
   }

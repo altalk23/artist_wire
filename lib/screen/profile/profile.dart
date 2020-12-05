@@ -27,25 +27,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
           GalleryCard(data: cloudData[username]["profile"]["gallery"]),
           PeopleCard(data: cloudData[username]["profile"]["people"]),
           PostCard(data: cloudData[username]["profile"]["post"]),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 16),
-            height: 184,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Themes.blue.shade200,
-                width: 2,
-              ),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            alignment: Alignment.center,
-            child: FlatButton(
-              child: Icon(
-                Icons.add,
-                size: 56,
-                color: Themes.blue.shade200,
-              ),
-            ),
-          ),
+          // Container(
+          //   margin: EdgeInsets.symmetric(horizontal: 16),
+          //   height: 184,
+          //   decoration: BoxDecoration(
+          //     border: Border.all(
+          //       color: Themes.blue.shade200,
+          //       width: 2,
+          //     ),
+          //     borderRadius: BorderRadius.circular(8),
+          //   ),
+          //   alignment: Alignment.center,
+          //   child: FlatButton(
+          //     child: Icon(
+          //       Icons.add,
+          //       size: 56,
+          //       color: Themes.blue.shade200,
+          //     ),
+          //   ),
+          // ),
           SizedBox(height: 32),
         ],
       ),
